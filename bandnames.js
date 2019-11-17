@@ -2,9 +2,9 @@
 
 var adjectives;
 var nouns;
-
+ // this is a free api with very limited request rate so have at it 
 function fetchNames(type = "adjective") {
-fetch(`https://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=true&includePartOfSpeech=${type}&maxCorpusCount=-1&minDictionaryCount=0&maxDictionaryCount=-1&minLength=4&maxLength=-1&limit=100&api_key=nv78jxoqw7bu1xbgfx2tb3fij73km474ft9vydfozdmckawvn`) // this is a free api with very limited request rate so have at it 
+fetch(`https://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=true&includePartOfSpeech=${type}&maxCorpusCount=-1&minDictionaryCount=0&maxDictionaryCount=-1&minLength=4&maxLength=-1&limit=100&api_key=nv78jxoqw7bu1xbgfx2tb3fij73km474ft9vydfozdmckawvn`)
     .then(function (response) {
            if (!response.ok) {
             throw Error(response.statusText);
